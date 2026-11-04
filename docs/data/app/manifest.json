@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "version": "2026-10-28.1",
+ "records_through": "2026-10-28",
+ "published": "2026-10-29T02:06:55Z",
+ "min_app_build": 1,
+ "files": {
+  "detail-district-of-columbia": {
+   "path": "detail-district-of-columbia-a3aab5414bfa.json",
+   "sha256": "a3aab5414bfada62efc0766aabb5b5a4bbceed69bfc957b6c49b9d2e936323a7",
+   "bytes": 662895,
+   "rows": 3165
+  },
+  "places": {
+   "path": "places-c1db650601dd.json",
+   "sha256": "c1db650601dda4301398b268aacf895a57cae202d335fc4c71f74cb28c336ac5",
+   "bytes": 525276,
+   "rows": 3208
+  }
+ },
+ "counts": {
+  "places": 3208,
+  "files": 2,
+  "bytes": 1188171,
+  "restaurants": 2974
+ }
+}

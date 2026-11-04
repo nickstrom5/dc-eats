@@ -1,0 +1,205 @@
+{
+ "generated": "2026-10-28",
+ "domain": "https://nickstrom5.github.io/dc-eats",
+ "restaurants": 2974,
+ "places_incl_hidden": 3208,
+ "neighborhoods": 111,
+ "wards": 8,
+ "on_an_official_list": 2414,
+ "hand_checked_on_a_guide": 24,
+ "serves_alcohol": 1304,
+ "sidewalk_cafes": 776,
+ "guide_halfsmokes": 3,
+ "guide_mumbo": 1,
+ "guide_jumbo": 1,
+ "guide_ethiopian": 13,
+ "guide_pupusas": 2,
+ "guide_seafood": 2,
+ "guide_pages": [
+  "ethiopian"
+ ],
+ "oldest": 3,
+ "honors": 118,
+ "michelin": {
+  "MICHELIN Recommended": 59,
+  "Bib Gourmand": 28,
+  "1 MICHELIN Star": 18,
+  "2 MICHELIN Stars": 2
+ },
+ "james_beard": 16,
+ "americas_classics": 2,
+ "permits_updated": "2026-10-27",
+ "abc_roster": "2026-10",
+ "neighborhood_pages": {
+  "Shaw": {
+   "restaurants": 195,
+   "listed": 20,
+   "licensed": 172,
+   "ethiopian": 4,
+   "hon": 16,
+   "oldest": 0
+  },
+  "Adams Morgan": {
+   "restaurants": 92,
+   "listed": 4,
+   "licensed": 79,
+   "ethiopian": 2,
+   "hon": 3,
+   "oldest": 0
+  },
+  "Dupont Circle": {
+   "restaurants": 193,
+   "listed": 11,
+   "licensed": 157,
+   "ethiopian": 1,
+   "hon": 10,
+   "oldest": 0
+  },
+  "Penn Quarter": {
+   "restaurants": 74,
+   "listed": 8,
+   "licensed": 63,
+   "ethiopian": 0,
+   "hon": 8,
+   "oldest": 0
+  },
+  "Capitol Hill": {
+   "restaurants": 109,
+   "listed": 4,
+   "licensed": 99,
+   "ethiopian": 0,
+   "hon": 4,
+   "oldest": 0
+  },
+  "Georgetown": {
+   "restaurants": 166,
+   "listed": 7,
+   "licensed": 144,
+   "ethiopian": 0,
+   "hon": 7,
+   "oldest": 0
+  },
+  "Columbia Heights": {
+   "restaurants": 64,
+   "listed": 5,
+   "licensed": 55,
+   "ethiopian": 2,
+   "hon": 3,
+   "oldest": 0
+  },
+  "Mount Pleasant": {
+   "restaurants": 25,
+   "listed": 3,
+   "licensed": 22,
+   "ethiopian": 0,
+   "hon": 3,
+   "oldest": 0
+  },
+  "Petworth": {
+   "restaurants": 37,
+   "listed": 5,
+   "licensed": 30,
+   "ethiopian": 2,
+   "hon": 3,
+   "oldest": 0
+  },
+  "Near Northeast": {
+   "restaurants": 103,
+   "listed": 5,
+   "licensed": 82,
+   "ethiopian": 1,
+   "hon": 4,
+   "oldest": 0
+  },
+  "West End": {
+   "restaurants": 35,
+   "listed": 4,
+   "licensed": 29,
+   "ethiopian": 0,
+   "hon": 4,
+   "oldest": 0
+  },
+  "Connecticut Avenue/K Street": {
+   "restaurants": 178,
+   "listed": 6,
+   "licensed": 135,
+   "ethiopian": 0,
+   "hon": 6,
+   "oldest": 0
+  },
+  "Stanton Park": {
+   "restaurants": 56,
+   "listed": 4,
+   "licensed": 48,
+   "ethiopian": 0,
+   "hon": 4,
+   "oldest": 0
+  }
+ },
+ "neighborhoods_without_a_page": {
+  "Logan Circle": 2,
+  "Chinatown": 2,
+  "Downtown": 2,
+  "Navy Yard": 3,
+  "Southwest Waterfront": 2,
+  "Mount Vernon Square": 2,
+  "Truxton Circle": 1,
+  "Bloomingdale": 2,
+  "Brookland": 0,
+  "Foggy Bottom": 0,
+  "Cleveland Park": 1,
+  "Woodley Park": 1,
+  "Le Droit Park": 1,
+  "Historic Anacostia": 1,
+  "Eckington": 0,
+  "Union Station": 0,
+  "Kingman Park": 1
+ },
+ "noindex_pages": [],
+ "web_app_data_bytes": {
+  "data/core.json": {
+   "raw": 245949,
+   "gzip": 49900
+  },
+  "data/dc_shapes.json": {
+   "raw": 11292,
+   "gzip": 2562
+  },
+  "data/detail-ward-1.json": {
+   "raw": 86321,
+   "gzip": 12408
+  },
+  "data/detail-ward-2.json": {
+   "raw": 226984,
+   "gzip": 32999
+  },
+  "data/detail-ward-3.json": {
+   "raw": 51679,
+   "gzip": 7712
+  },
+  "data/detail-ward-4.json": {
+   "raw": 33714,
+   "gzip": 5512
+  },
+  "data/detail-ward-5.json": {
+   "raw": 55536,
+   "gzip": 9111
+  },
+  "data/detail-ward-6.json": {
+   "raw": 102339,
+   "gzip": 15138
+  },
+  "data/detail-ward-7.json": {
+   "raw": 10565,
+   "gzip": 2286
+  },
+  "data/detail-ward-8.json": {
+   "raw": 24655,
+   "gzip": 4338
+  },
+  "data/ids.json": {
+   "raw": 38690,
+   "gzip": 22857
+  }
+ }
+}

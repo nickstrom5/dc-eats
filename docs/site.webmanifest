@@ -1,0 +1,21 @@
+{
+  "name": "DC Eats",
+  "short_name": "DC Eats",
+  "description": "Half-smokes, injera & pupusas: a guide to 2,974 Washington, DC restaurants.",
+  "start_url": "/dc-eats/",
+  "display": "browser",
+  "background_color": "#f3f5fa",
+  "theme_color": "#041e42",
+  "icons": [
+    {
+      "src": "/dc-eats/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dc-eats/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

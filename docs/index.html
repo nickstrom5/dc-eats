@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-base="/dc-eats">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YfPxYBJDc639ac4gHFGjFpJLVatKf6JcrBZeF/tuACM='; style-src 'sha256-HHMD0UgF/f99CFlJWAaEBIMT/T/LajGqk5qKKAGE2Gg='; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DC Eats: Washington, DC Restaurant Guide for iPhone</title>
+<meta name="description" content="Ethiopian, half-smokes, MICHELIN and James Beard: a free iPhone and iPad guide to 2,974 Washington, DC restaurants, with the District&#x27;s licenses.">
+<link rel="canonical" href="https://nickstrom5.github.io/dc-eats/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#041e42">
+<!-- Smart App Banner: once the App Store Connect record exists, replace APP_ID with the numeric Apple ID and uncomment.
+<meta name="apple-itunes-app" content="app-id=APP_ID">
+-->
+<meta property="og:title" content="DC Eats: Washington, DC Restaurant Guide for iPhone">
+<meta property="og:description" content="Ethiopian, half-smokes, MICHELIN and James Beard: a free iPhone and iPad guide to 2,974 Washington, DC restaurants, with the District&#x27;s licenses.">
+<meta property="og:url" content="https://nickstrom5.github.io/dc-eats/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DC Eats">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://nickstrom5.github.io/dc-eats/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DC Eats: Half-smokes, injera &amp; pupusas. Washington, DC restaurants, with hand-checked half-smokes, Ethiopian and pupusas, and the District&#x27;s own licenses.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DC Eats: Washington, DC Restaurant Guide for iPhone">
+<meta name="twitter:description" content="Ethiopian, half-smokes, MICHELIN and James Beard: a free iPhone and iPad guide to 2,974 Washington, DC restaurants, with the District&#x27;s licenses.">
+<meta name="twitter:image" content="https://nickstrom5.github.io/dc-eats/og.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23041E42'/%3E%3Ccircle cx='32' cy='31.4' r='18.2' fill='%23EEF0F2'/%3E%3Cpath d='M32 10.2L55.4 46.4Q32 50.6 8.6 46.4Z' fill='%23F6C453' stroke='%23041E42' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M8.6 46.4Q32 50.6 55.4 46.4V48.6Q32 54 8.6 48.6Z' fill='%23D98E3F'/%3E%3Ccircle cx='32' cy='22.7' r='1.9' fill='%23B3261E'/%3E%3Ccircle cx='26.9' cy='32.2' r='2.4' fill='%23B3261E'/%3E%3Ccircle cx='37.1' cy='32.2' r='2.4' fill='%23B3261E'/%3E%3Ccircle cx='19.8' cy='40.5' r='2' fill='%23B3261E'/%3E%3Ccircle cx='44.2' cy='40.5' r='2' fill='%23B3261E'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="/dc-eats/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dc-eats/apple-touch-icon.png">
+<link rel="manifest" href="/dc-eats/site.webmanifest">
+<style>
+  :root {
+    --bg: #f3f5fa; --surface: #fff; --surface2: #e6ebf3; --rule: #dce2ec;
+    --ink: #0f1b33; --ink2: #28375a; --muted: #566079;
+    --accent: #041e42; --accent2: #1c3a66; --on-accent: #fff; --orange: #c8102e; --on-orange: #fff; --lime: #d98e3f; --soft: #f8dce1; --limesoft: #fcefc8;
+    --focus: #c8102e;
+    --radius: 16px;
+    --display: "Avenir Next Condensed", "Helvetica Neue Condensed", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b1426; --surface: #111e38; --surface2: #172747; --rule: #263a63; --ink: #eef2fa; --ink2: #d3dcef; --muted: #a9b6d0; --accent: #a9c0f0; --accent2: #c6d6f6; --on-accent: #0b1426; --focus: #ff8aa4; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--orange); color: var(--on-orange); padding: 10px 14px; font-weight: 700; z-index: 10; }
+  .skip:focus { left: 8px; top: 8px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header.site { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0 14px; }
+  .stripes { display: block; margin: 0 0 4px; border-radius: 4px; overflow: hidden; line-height: 0; }
+  .stripes svg { display: block; width: 100%; height: 20px; }
+  .stripes .sky { fill: var(--surface2); }   /* the band behind the flag's stars follows the theme */
+  .logo { display: flex; align-items: center; gap: 10px; font: 800 24px/1 var(--display); text-transform: uppercase; letter-spacing: .01em; color: var(--accent); text-decoration: none; }
+  .logo svg { flex: 0 0 auto; border-radius: 7px; }
+  header.site nav { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: flex-end; }
+  header.site nav a { color: var(--ink2); text-decoration: none; font-size: 15px; }
+  header.site nav a:hover { color: var(--accent); text-decoration: underline; }
+  h1, h2 { font-family: var(--display); font-weight: 800; color: var(--accent); letter-spacing: -.005em; }
+  h1 { font-size: clamp(40px, 8.5vw, 64px); line-height: .95; margin: 0 0 18px; text-transform: uppercase; overflow-wrap: break-word; text-shadow: 3px 3px 0 var(--orange); }
+  .kicker { font: 600 13px/1.4 var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  .kicker::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); margin: 0 8px 1px 0; }
+  h2 { font-size: 34px; line-height: 1.02; margin: 0 0 10px; text-transform: uppercase; }
+  h3 { font-size: 18px; margin: 0; line-height: 1.3; }
+  .lede { font-size: 19px; color: var(--ink2); margin: 0 0 26px; }
+  .hero { padding: 44px 0 28px; }
+  section { padding: 36px 0; border-top: 1px solid var(--rule); }
+  section.hero { border: 0; }
+  .sub { color: var(--ink2); margin: 0 0 22px; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--orange); color: var(--on-orange); font-weight: 700; padding: 14px 20px; border-radius: 14px; text-decoration: none; font-size: 17px; }
+  .btn-ghost { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+  .pill { font-size: 14px; color: var(--muted); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .stats li { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; }
+  .stats b { display: block; font: 600 28px/1 var(--mono); color: var(--accent); }
+  .stats span { font-size: 14px; color: var(--muted); }
+  .steps { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
+  .step { display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 18px; }
+  .step .n { flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--orange); color: var(--on-orange); font-weight: 800; display: grid; place-items: center; }
+  .step p { margin: 4px 0 0; color: var(--ink2); }
+  .shots { display: flex; gap: 14px; overflow-x: auto; margin: 0 -20px; padding: 4px 20px 14px; scroll-snap-type: x proximity; list-style: none; }
+  .shots li { flex: 0 0 auto; width: 210px; scroll-snap-align: start; }
+  .shots img { display: block; width: 210px; height: auto; border-radius: 24px; border: 1px solid var(--rule); background: var(--surface2); }
+  .shots p { font-size: 14px; color: var(--muted); margin: 8px 2px 0; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 18px; }
+  .card h3 { font: 800 21px/1.1 var(--display); text-transform: uppercase; letter-spacing: .01em; }
+  a.card.gc { display: flex; flex-direction: column; gap: 6px; border: 0; border-radius: 18px; min-height: 150px; }
+  a.card.gc b { font: 600 32px/1 var(--mono); margin-bottom: auto; }
+  a.card.gc p, a.card.gc h3 { color: inherit; }
+  a.card.gc p { opacity: .92; }
+  a.card.gc.gc-halfsmokes, a.card.gc.gc-mumbo, a.card.gc.gc-jumbo, a.card.gc.gc-ethiopian, a.card.gc.gc-pupusas, a.card.gc.gc-seafood { background: #c8102e; color: #fff; }
+  a.card.gc.gc-oldest, a.card.gc.gc-honors, a.card.gc.gc-licenses { background: #041e42; color: #fff; }
+  .card p { margin: 6px 0 0; color: var(--ink2); }
+  a.card { display: block; text-decoration: none; color: var(--ink); }
+  a.card:hover h3 { text-decoration: underline; color: var(--accent); }
+  .cities { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+  .cities a { display: inline-block; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); text-decoration: none; color: var(--ink); font-size: 15px; }
+  .cities a:hover { border-color: var(--accent); }
+  .cities a[aria-current] { border-color: var(--accent); font-weight: 700; }
+  details { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 2px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; padding: 14px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--accent); font-weight: 800; }
+  details[open] summary::after { content: "\2013"; }
+  details p { margin: 0 0 16px; color: var(--ink2); }
+  .final { text-align: center; }
+  .final .cta-row { justify-content: center; }
+  nav.crumbs { font-size: 14px; color: var(--muted); padding: 16px 0 0; }
+  nav.crumbs ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  nav.crumbs li + li::before { content: "/"; margin-right: 6px; color: var(--rule); }
+  nav.crumbs a { color: var(--muted); }
+  .places { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .places li { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px 16px; min-width: 0; overflow-wrap: anywhere; scroll-margin-top: 12px; }
+  .places li:target { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+  .places .where { margin: 2px 0 0; font-size: 15px; color: var(--muted); }
+  .places .facts { margin: 8px 0 0; font-size: 15px; color: var(--ink2); }
+  .places .facts b { color: var(--ink); font-weight: 600; }
+  .places .note { margin: 6px 0 0; font-size: 15px; color: var(--ink2); }
+  .places .fine { margin: 6px 0 0; }
+  .places .link { font-size: 14px; margin: 6px 0 0; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; background: var(--soft); color: #6a0718; border-radius: 6px; padding: 1px 6px; margin: 0 4px 2px 0; }
+  .tag-mi { background: #c8102e; color: #fff; }
+  .tag-jb { background: #041e42; color: #fff; }
+  .tag-plain { background: #e6ebf3; color: #0f1b33; }
+  .grades { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+  .grades li { display: flex; align-items: center; gap: 8px; }
+  .card-grade { display: inline-grid; place-items: center; min-width: 30px; height: 30px; padding: 0 6px; border: 2px solid #111; background: #fff; color: #111; font: 800 18px/1 var(--display); border-radius: 4px; }
+  .toc { columns: 2; padding-left: 20px; margin: 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .tbl { overflow-x: auto; }
+  .res { display: inline-block; font: 800 12px/1.4 -apple-system, system-ui, sans-serif; letter-spacing: .04em; text-transform: uppercase; padding: 2px 6px; border-radius: 6px; }
+  .res-ok { background: #ddefe3; color: #0e5a2b; } .res-mid { background: #ffe9c2; color: #6b3a00; } .res-low { background: #f9d5db; color: #7a0019; }
+  .groups { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 12px; }
+  .groups > li { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px 16px; }
+  .groups ul { margin: 8px 0 0; padding-left: 20px; color: var(--ink2); font-size: 15px; }
+  .groups .count { margin: 8px 0 0; font-weight: 600; }
+  .fine { font-size: 14px; color: var(--muted); }
+  .legal h2 { font-size: 26px; margin-top: 28px; }
+  .legal p, .legal li { color: var(--ink2); }
+  footer { padding: 32px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); margin-top: 20px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+  footer a { color: var(--muted); }
+  footer p { margin: 12px 0 0; }
+  @media (max-width: 600px) {
+    .grid2 { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .toc { columns: 1; }
+    .toc a { display: inline-block; padding: 3px 0; }
+    header.site { flex-direction: column; align-items: flex-start; }
+    header.site nav { justify-content: flex-start; }
+    header.site nav a, footer nav a, nav.crumbs a { display: inline-block; padding: 10px 0; }
+    footer nav { gap: 0 18px; }
+    th, td { padding: 8px 4px; font-size: 14px; }
+    .tbl th, .tbl td { padding: 8px 3px; font-size: 13px; }
+    .res { font-size: 11px; letter-spacing: .02em; padding: 2px 4px; }
+    nav.crumbs ol { align-items: center; }
+  }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "MobileApplication",
+   "@id": "https://nickstrom5.github.io/dc-eats/#app",
+   "name": "DC Eats: Restaurants",
+   "alternateName": [
+    "DC Eats",
+    "DC Eats: Half-Smokes, Injera \u0026 Pupusas"
+   ],
+   "description": "A free guide to 2,974 Washington, DC restaurants, with hand-checked lists of Ethiopian restaurants, half-smokes, mumbo sauce carryouts, jumbo slice, pupuserías and seafood at the Wharf, 118 MICHELIN and James Beard honorees, and the District's own business and alcohol licenses. Sort by distance, open Apple Maps' live place card for hours and photos, and save places for your next outing.",
+   "url": "https://nickstrom5.github.io/dc-eats/",
+   "image": "https://nickstrom5.github.io/dc-eats/og.png",
+   "operatingSystem": "iOS, iPadOS",
+   "applicationCategory": "TravelApplication",
+   "applicationSubCategory": "Food \u0026 Drink",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://nickstrom5.github.io/dc-eats/#org"
+   },
+   "screenshot": "https://nickstrom5.github.io/dc-eats/img/screen-home.png"
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://nickstrom5.github.io/dc-eats/#org",
+   "name": "DC Eats",
+   "url": "https://nickstrom5.github.io/dc-eats/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://nickstrom5.github.io/dc-eats/icon-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "email": "nick@eatsranked.com",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "nick@eatsranked.com",
+    "availableLanguage": "en"
+   },
+   "parentOrganization": {
+    "@type": "Organization",
+    "@id": "https://eatsranked.com/#organization",
+    "name": "Eats Ranked",
+    "url": "https://eatsranked.com/"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://nickstrom5.github.io/dc-eats/#website",
+   "name": "DC Eats",
+   "alternateName": [
+    "DC Eats app"
+   ],
+   "url": "https://nickstrom5.github.io/dc-eats/",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://nickstrom5.github.io/dc-eats/#org"
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://nickstrom5.github.io/dc-eats/#faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is DC Eats free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Completely: no price, no ads, no in-app purchases and no account to create. It's an iPhone and iPad app on its way to the App Store, with no Android version yet; until it's out, the web search here works in any browser."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where do the lists come from?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Two kinds of source. The Ethiopian, half-smoke, mumbo sauce, jumbo slice, pupusa and fish market lists are our own research from fall 2026, with a source naming each place for the food and a 2025 or 2026 source showing it open: its website or menu, a dated local story, the MICHELIN Guide, a current Washington.org page or its own active DC business license. The wider directory of 2,974 restaurants starts from Overture Maps' open place data, keeps the kinds of listing that proved reliable against the District's own licenses, and adds licensed restaurants and bars the map data missed."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where can I get Ethiopian food in DC?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Our Ethiopian list has 13 hand-checked places in 7 neighborhoods, more than half of them in Shaw, Adams Morgan and Columbia Heights. In the web search, the list puts the nearest first once you share your location."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does DC grade its restaurants?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. DC Health inspects food establishments pass/fail and gives no letter grade, score or placard. Its reports are posted in its own search, which each place links; we copy none and compute no grade."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it show which places serve alcohol?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, from the District's own records: a place serves alcohol when it holds a live on-premises license on ABCA's roster (1,304 places we list). Without one, it shows as unknown, never as no. ABCA's sidewalk café and summer garden endorsements feed the Sidewalk Cafés list."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it show ratings and reviews?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not from us. Tapping a place opens Apple Maps' own card inside the app, with Apple's current ratings, hours, photos and directions. None of our lists is sorted by anyone's rating."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it need my location?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Location only matters for putting the nearest places first. If you share it, it stays on your iPhone or iPad and never reaches us, and the app works fine without it. On this website, Near me reads your location inside your browser and nowhere else."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "A place has closed, or something's wrong. How do I tell you?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Write to nick@eatsranked.com with the place's name, its neighborhood and what changed. Corrections ship with the next data update."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="site">
+    <a class="logo" href="/dc-eats/" aria-label="DC Eats home"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#041E42"/><circle cx="32" cy="31.4" r="18.2" fill="#EEF0F2"/><path d="M32 10.2L55.4 46.4Q32 50.6 8.6 46.4Z" fill="#F6C453" stroke="#041E42" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.6 46.4Q32 50.6 55.4 46.4V48.6Q32 54 8.6 48.6Z" fill="#D98E3F"/><circle cx="32" cy="22.7" r="1.9" fill="#B3261E"/><circle cx="26.9" cy="32.2" r="2.4" fill="#B3261E"/><circle cx="37.1" cy="32.2" r="2.4" fill="#B3261E"/><circle cx="19.8" cy="40.5" r="2" fill="#B3261E"/><circle cx="44.2" cy="40.5" r="2" fill="#B3261E"/></svg>DC Eats</a>
+    <nav aria-label="Main">
+      <a href="/dc-eats/dc-ethiopian-restaurants.html">Ethiopian</a>
+      <a href="/dc-eats/dc-michelin-james-beard.html">MICHELIN</a>
+      <a href="/dc-eats/dc-restaurant-licenses-inspections.html">Licenses</a>
+      <a href="/dc-eats/neighborhoods/">Neighborhoods</a>
+      <a href="/dc-eats/explore/">Search</a>
+    </nav>
+  </header>
+  <div class="stripes" aria-hidden="true"><svg viewBox="0 0 1200 20" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect class="sky" x="0" y="0" width="1200" height="20"/><path fill="#c8102e" d="M580.0 1.5 L578.9 5.0 L575.2 5.0 L578.2 7.1 L577.1 10.5 L580.0 8.4 L582.9 10.5 L581.8 7.1 L584.8 5.0 L581.1 5.0Z"/><path fill="#c8102e" d="M600.0 1.5 L598.9 5.0 L595.2 5.0 L598.2 7.1 L597.1 10.5 L600.0 8.4 L602.9 10.5 L601.8 7.1 L604.8 5.0 L601.1 5.0Z"/><path fill="#c8102e" d="M620.0 1.5 L618.9 5.0 L615.2 5.0 L618.2 7.1 L617.1 10.5 L620.0 8.4 L622.9 10.5 L621.8 7.1 L624.8 5.0 L621.1 5.0Z"/><rect x="0" y="13" width="1200" height="2.4" fill="#c8102e"/><rect x="0" y="17.4" width="1200" height="2.4" fill="#c8102e"/></svg></div>
+  <main id="main">
+  <section class="hero">
+    <p class="kicker">DC Eats: Half-smokes, injera & pupusas for iPhone and iPad</p>
+    <h1>Washington, DC restaurants, half-smokes to MICHELIN</h1>
+    <p class="lede">Looking for injera and tibs on U Street, a half-smoke all the way, pupusas in Mount Pleasant or a two-star tasting menu? DC Eats starts with lists we checked place by place, adds the MICHELIN Guide and James Beard honorees and the District's own business and alcohol licenses, and maps 2,974 restaurants, cafés, bars and bakeries in 111 DC neighborhoods.</p>
+    <div class="cta-row"><a class="btn store-btn" href="mailto:nick@eatsranked.com?subject=DC%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span class="store-label">Ask for early access</span></a><a class="btn btn-ghost" href="/dc-eats/explore/">Search on the web</a><span class="pill store-note">No charge, no ads, no sign-in. The App Store release is on its way.</span></div>
+    <ul class="stats" aria-label="What's in the app">
+      <li><b>24</b><span>hand-checked places</span></li>
+      <li><b>118</b><span>MICHELIN &amp; James Beard</span></li>
+      <li><b>2,414</b><span>on a DC license list</span></li>
+      <li><b>2,974</b><span>restaurants</span></li>
+    </ul>
+  </section>
+
+  <section id="what">
+    <h2>Built around how DC eats</h2>
+    <p class="sub">Star ratings won't tell you which carryout still does the half-smoke all the way, or which Ethiopian kitchen is open late. DC Eats is organized the way people here eat: Ethiopian restaurants, half-smokes, mumbo sauce carryouts, jumbo slice, pupuserías and seafood at the Wharf, each place checked in fall 2026 against a 2025–26 source. Each place shows its own DC business and alcohol licenses, ABCA's outdoor-seating endorsements make a Sidewalk Cafés list, and Apple Maps' live card supplies ratings, hours and photos.</p>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Start with a craving.</h3><p>Ethiopian, Half-smokes, Mumbo sauce, Jumbo slice, Pupuserías, Fish market &amp; Wharf, MICHELIN &amp; James Beard or sidewalk cafés. Or type a name, a neighborhood, a street or a dish to search the 2,974 we list.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">2</div><div><h3>Find the closest one.</h3><p>Put the nearest first, narrow it to one neighborhood or one kind of food, or pan the map from Georgetown to Anacostia.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">3</div><div><h3>Head out.</h3><p>Check today's hours and photos on Apple Maps' card, call ahead, get directions, or save the place for later.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="screens">
+    <h2>Inside the app</h2>
+    <ul class="shots" tabindex="0" aria-label="DC Eats app screenshots">
+      <li><picture><source srcset="/dc-eats/img/screen-home.webp" type="image/webp"><img src="/dc-eats/img/screen-home.png" alt="The DC Eats home screen: a search box and guide cards for half-smokes and chili, mumbo sauce carryouts, jumbo slice, Ethiopian, pupuserías and the fish market and Wharf, each with its count of places." width="480" height="1043" loading="lazy" decoding="async"></picture><p>A guide for each DC craving.</p></li><li><picture><source srcset="/dc-eats/img/screen-ethiopian.webp" type="image/webp"><img src="/dc-eats/img/screen-ethiopian.png" alt="The hand-checked Ethiopian list in DC Eats, nearest first, with each place&#x27;s neighborhood." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Ethiopian, Shaw to Petworth.</p></li><li><picture><source srcset="/dc-eats/img/screen-detail.webp" type="image/webp"><img src="/dc-eats/img/screen-detail.png" alt="Rose&#x27;s Luxury in DC Eats: its neighborhood and ward, address, MICHELIN Star tag, a button for Apple Maps&#x27; ratings, hours and photos, Directions, Call and Website buttons, a small map, its honors and its DC business and alcohol licenses." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Each place, with its DC licenses.</p></li><li><picture><source srcset="/dc-eats/img/screen-patios.webp" type="image/webp"><img src="/dc-eats/img/screen-patios.png" alt="The Sidewalk Cafés &amp; Patios list in DC Eats: places whose own ABCA license carries an outdoor seating endorsement." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Outdoor seating, from ABCA&#x27;s records.</p></li><li><picture><source srcset="/dc-eats/img/screen-map.webp" type="image/webp"><img src="/dc-eats/img/screen-map.png" alt="The DC Eats map of the District, with pins and numbered clusters and filter buttons for DC picks, honors and everything." width="480" height="1043" loading="lazy" decoding="async"></picture><p>The map, by guide.</p></li><li><picture><source srcset="/dc-eats/img/screen-honors.webp" type="image/webp"><img src="/dc-eats/img/screen-honors.png" alt="The MICHELIN and James Beard list in DC Eats." width="480" height="1043" loading="lazy" decoding="async"></picture><p>MICHELIN Guide and James Beard honorees.</p></li>
+    </ul>
+  </section>
+  <section id="guides">
+    <h2>DC food guides</h2>
+    <p class="sub">Each of the app's lists has its own page here, free to read.</p>
+    <div class="grid2">
+      <a class="card gc gc-ethiopian" href="/dc-eats/dc-ethiopian-restaurants.html"><b>13</b><h3>Ethiopian restaurants</h3><p>13 hand-checked places for injera, tibs and wat.</p></a>
+      
+      <a class="card gc gc-honors" href="/dc-eats/dc-michelin-james-beard.html"><b>118</b><h3>MICHELIN &amp; James Beard</h3><p>118 honored DC restaurants.</p></a>
+      <a class="card gc gc-licenses" href="/dc-eats/dc-restaurant-licenses-inspections.html"><b>2,414</b><h3>Licenses &amp; inspections, explained</h3><p>DC's business and alcohol licenses, the sidewalk café endorsement, and why DC Health gives no grades.</p></a>
+    </div>
+  </section>
+
+  <section id="cities">
+    <h2>Neighborhood by neighborhood</h2>
+    <p class="sub">The neighborhoods with enough hand-checked or honored places for a page of their own. The <a href="/dc-eats/neighborhoods/">neighborhoods index</a> sums up what's on each.</p>
+    <ul class="cities"><li><a href="/dc-eats/neighborhoods/shaw.html">Shaw</a></li><li><a href="/dc-eats/neighborhoods/adams-morgan.html">Adams Morgan</a></li><li><a href="/dc-eats/neighborhoods/dupont-circle.html">Dupont Circle</a></li><li><a href="/dc-eats/neighborhoods/penn-quarter.html">Penn Quarter</a></li><li><a href="/dc-eats/neighborhoods/capitol-hill.html">Capitol Hill</a></li><li><a href="/dc-eats/neighborhoods/georgetown.html">Georgetown</a></li><li><a href="/dc-eats/neighborhoods/columbia-heights.html">Columbia Heights</a></li><li><a href="/dc-eats/neighborhoods/mount-pleasant.html">Mount Pleasant</a></li><li><a href="/dc-eats/neighborhoods/petworth.html">Petworth</a></li><li><a href="/dc-eats/neighborhoods/near-northeast.html">Near Northeast</a></li><li><a href="/dc-eats/neighborhoods/west-end.html">West End</a></li><li><a href="/dc-eats/neighborhoods/connecticut-avenue-k-street.html">Connecticut Avenue/K Street</a></li><li><a href="/dc-eats/neighborhoods/stanton-park.html">Stanton Park</a></li></ul>
+  </section>
+
+  <section id="pricing">
+    <h2>Free, with no catch</h2>
+    <p class="sub">The app costs nothing, shows no ads and sells nothing inside, and there's no account to make. The lists ship inside the app, so they open right away and keep working when the signal drops out on the Metro.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>What stays on your phone</h2>
+    <p class="sub">DC Eats collects nothing about you: no sign-in, no analytics, no ads. Location, if you turn it on, only puts the nearest places first, and your saved places are kept on the phone or iPad. The website has no cookies and no trackers. <a href="/dc-eats/privacy.html">The privacy policy</a> has the details.</p>
+  </section>
+
+  <section id="faq">
+    <h2>Questions</h2>
+    <details><summary>Is DC Eats free?</summary><p>Completely: no price, no ads, no in-app purchases and no account to create. It&#x27;s an iPhone and iPad app on its way to the App Store, with no Android version yet; until it&#x27;s out, the web search here works in any browser.</p></details><details><summary>Where do the lists come from?</summary><p>Two kinds of source. The Ethiopian, half-smoke, mumbo sauce, jumbo slice, pupusa and fish market lists are our own research from fall 2026, with a source naming each place for the food and a 2025 or 2026 source showing it open: its website or menu, a dated local story, the MICHELIN Guide, a current Washington.org page or its own active DC business license. The wider directory of 2,974 restaurants starts from Overture Maps&#x27; open place data, keeps the kinds of listing that proved reliable against the District&#x27;s own licenses, and adds licensed restaurants and bars the map data missed.</p></details><details><summary>Where can I get Ethiopian food in DC?</summary><p>Our Ethiopian list has 13 hand-checked places in 7 neighborhoods, more than half of them in Shaw, Adams Morgan and Columbia Heights. In the web search, the list puts the nearest first once you share your location.</p></details><details><summary>Does DC grade its restaurants?</summary><p>No. DC Health inspects food establishments pass/fail and gives no letter grade, score or placard. Its reports are posted in its own search, which each place links; we copy none and compute no grade.</p></details><details><summary>Does it show which places serve alcohol?</summary><p>Yes, from the District&#x27;s own records: a place serves alcohol when it holds a live on-premises license on ABCA&#x27;s roster (1,304 places we list). Without one, it shows as unknown, never as no. ABCA&#x27;s sidewalk café and summer garden endorsements feed the Sidewalk Cafés list.</p></details><details><summary>Does it show ratings and reviews?</summary><p>Not from us. Tapping a place opens Apple Maps&#x27; own card inside the app, with Apple&#x27;s current ratings, hours, photos and directions. None of our lists is sorted by anyone&#x27;s rating.</p></details><details><summary>Does it need my location?</summary><p>No. Location only matters for putting the nearest places first. If you share it, it stays on your iPhone or iPad and never reaches us, and the app works fine without it. On this website, Near me reads your location inside your browser and nowhere else.</p></details><details><summary>A place has closed, or something&#x27;s wrong. How do I tell you?</summary><p>Write to nick@eatsranked.com with the place&#x27;s name, its neighborhood and what changed. Corrections ship with the next data update.</p></details>
+  </section>
+
+  <section id="download" class="final">
+    <h2>Find your next half-smoke</h2>
+    <p class="sub">The iPhone and iPad app is almost here, and it's free. Ask for early access.</p>
+    <div class="cta-row"><a class="btn store-btn" href="mailto:nick@eatsranked.com?subject=DC%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span class="store-label">Ask for early access</span></a></div>
+  </section>
+  </main>
+  <footer>
+    <nav aria-label="Footer">
+      <a href="/dc-eats/">DC Eats app</a>
+      <a href="/dc-eats/explore/">Search DC restaurants</a>
+      <a href="/dc-eats/dc-ethiopian-restaurants.html">Ethiopian restaurants</a>
+      <a href="/dc-eats/dc-michelin-james-beard.html">MICHELIN &amp; James Beard</a>
+      <a href="/dc-eats/dc-restaurant-licenses-inspections.html">Licenses &amp; inspections, explained</a>
+      <a href="/dc-eats/neighborhoods/">Neighborhoods</a>
+      <a href="/dc-eats/privacy.html">Privacy policy</a>
+      <a href="/dc-eats/terms.html">Terms of use</a>
+      <a href="mailto:nick@eatsranked.com">Email us</a>
+    </nav>
+    <p>Place data: hand-checked research by DC Eats (fall 2026); the Department of Licensing and Consumer Protection's Basic Business Licenses (refreshed October 27, 2026) and ABCA's alcohol license roster (October 2026), with the District's wards, neighborhood clusters, historic districts and address points (Open Data DC, CC BY 4.0); Overture Maps Foundation places (CDLA Permissive 2.0). Not affiliated with or endorsed by the Government of the District of Columbia, DC Health, DLCP, ABCA, any restaurant or chain, the MICHELIN Guide or the James Beard Foundation. MICHELIN and the MICHELIN Guide are trademarks of Michelin; James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
+    <p>© 2026 DC Eats. Part of <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>, restaurant apps state by state.</p>
+    <p>Created by <a href="https://work-with-nick.com/" rel="author">Nick Soderstrom</a>.</p>
+  </footer>
+</div>
+<script>
+  // Once the App Store listing exists, paste its URL here (looks like https://apps.apple.com/app/id123456789).
+  // Every button switches from "Ask for early access" to "Download on the App Store" automatically (then use Apple's badge artwork,
+  // see store_button() in scripts/make-site.py). Also fill in the apple-itunes-app meta tag in <head> on every page, and put the
+  // MobileApplication "offers" back in the landing page's JSON-LD (re-run scripts/make-site.py after editing it there).
+  var APP_STORE_URL = "";
+  if (APP_STORE_URL) {
+    document.querySelectorAll(".store-btn").forEach(function (b) { b.href = APP_STORE_URL; b.rel = "noopener"; });
+    document.querySelectorAll(".store-label").forEach(function (l) { l.textContent = "Download on the App Store"; });
+    document.querySelectorAll(".store-note").forEach(function (n) { n.textContent = "Free for iPhone and iPad."; });
+  }
+</script>
+</body>
+</html>
